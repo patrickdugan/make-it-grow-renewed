@@ -1,5 +1,0 @@
-{
-  "runtime": "nodejs20.x",
-  "regions": ["santiago1"], 
-  "functions": { "api/**.js": { "runtime": "nodejs20.x" } }
-}
