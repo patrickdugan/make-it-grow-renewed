@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Make It Grow</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        canvas {
+            image-rendering: pixelated;
+            background: #000;
+        }
+    </style>
+
+    <!-- GameMaker HTML5 runtime -->
+    <script type="text/javascript" src="tph_persistence.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+
+</head>
+<body>
+    <canvas id="canvas" width="800" height="600"></canvas>
+
+    <!-- Your soundtrack -->
+    <audio id="bgm" src="soundtrack/USA III_ Rail.mp3" loop></audio>
+
+    <script>
+        // Enable user-gesture autoplay
+        const audio = document.getElementById("bgm");
+        audio.volume = 0.5;
+
+        window.addEventListener("click", () => {
+            audio.play().catch(()=>{});
+        });
+
+        // GameMaker boot
+        window.onload = function () {
+            if (typeof gm_start === "function") {
+                gm_start();
+            }
+        };
+    </script>
+</body>
+</html>
