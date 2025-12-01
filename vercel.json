@@ -1,0 +1,13 @@
+{
+  "outputDirectory": "html5game",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "routes": [
+    { "src": "/(.*)", "dest": "/html5game/$1" }
+  ],
+  "framework": null,
+  "regions": ["iad1"],
+  "github": {
+    "silent": true
+  }
+}
